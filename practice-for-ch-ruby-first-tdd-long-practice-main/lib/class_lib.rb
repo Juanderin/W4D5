@@ -42,6 +42,27 @@ class Array
         arr
     end
 
+    def stock_prices
+        profit = 0
+        min_idx = 0
+        max_idx = 0
+
+        self.each_with_index do |ele, i|
+            end_idx = self.length - 1
+            
+            while end_idx > i
+                if self[end_idx] - self[i] > profit
+                    profit = self[end_idx] - self[i]
+                    min_idx = i
+                    max_idx = end_idx
+                end
+                end_idx -= 1
+            end
+        end
+
+        [min_idx, max_idx]
+    end
+
 
 end 
 
