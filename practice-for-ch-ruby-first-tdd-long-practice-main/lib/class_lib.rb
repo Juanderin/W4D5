@@ -30,6 +30,19 @@ class Array
     end 
 
 
+    def my_transpose
+        arr = Array.new(self.length) { Array.new(self.length) }
+
+        (0...self.length).each do |row|
+            (0...self.length).each do |col|
+                arr[row][col] = self[col][row]
+            end
+        end
+
+        arr
+    end
+
+
 end 
 
 

@@ -16,5 +16,12 @@ describe Array do
         end 
     end 
 
+    describe "#my_transpose" do
+        it "returns transposed version of matrix provided" do
+            arr = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+            expect(arr.my_transpose).to eq(arr.transpose)
+        end 
+    end
+
 end 
 
